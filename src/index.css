@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFDF7;
+    color: #172033;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom Utilities for Sunrise Brand Identity */
+.font-heading {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+.font-sans {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Sunrise Palette Utility Classes */
+.bg-sunrise-orange { background-color: #F97316; }
+.text-sunrise-orange { color: #F97316; }
+.border-sunrise-orange { border-color: #F97316; }
+
+.bg-warm-yellow { background-color: #FBBF24; }
+.text-warm-yellow { color: #D97706; }
+
+.bg-sky-blue { background-color: #38BDF8; }
+.text-sky-blue { color: #0284C7; }
+
+.bg-fresh-green { background-color: #22C55E; }
+.text-fresh-green { color: #16A34A; }
+
+.bg-warm-white { background-color: #FFFDF7; }
+.bg-warm-cream { background-color: #FEF9EE; }
+
+.bg-deep-navy { background-color: #172033; }
+.text-deep-navy { color: #172033; }
+
+/* Subtle Background Patterns */
+.bg-sun-rays {
+  background-image: radial-gradient(circle at 10% 20%, rgba(249, 115, 22, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 45%),
+                    radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 60%);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(#f97316 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  background-color: #FFFDF7;
+}
+
+/* Soft Cards & Shadows */
+.sunrise-card {
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(249, 115, 22, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(23, 32, 51, 0.05), 0 2px 6px -1px rgba(23, 32, 51, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sunrise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -4px rgba(249, 115, 22, 0.12), 0 4px 10px -2px rgba(23, 32, 51, 0.04);
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #F97316;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: #EA580C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+}
+
+.btn-secondary {
+  background-color: #172033;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(23, 32, 51, 0.25);
+}
+
+.btn-secondary:hover {
+  background-color: #0F172A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(23, 32, 51, 0.35);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #172033;
+  border: 2px solid #E2E8F0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline:hover {
+  border-color: #F97316;
+  color: #F97316;
+  background-color: rgba(249, 115, 22, 0.04);
+  transform: translateY(-1px);
+}
+
+.btn-yellow {
+  background-color: #FBBF24;
+  color: #172033;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.4);
+}
+
+.btn-yellow:hover {
+  background-color: #F59E0B;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Accessible Focus Ring */
+*:focus-visible {
+  outline: 3px solid #F97316;
+  outline-offset: 2px;
+}
